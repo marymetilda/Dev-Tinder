@@ -2,21 +2,21 @@ const express = require("express");
 
 const app = express();
 
-// app.use("/", (req, res) => {
-//   res.send("Hello from dashboard");
-// });
+app.use(
+  "/user",
+  (req, res, next) => {
+    console.log("First Route handler");
 
-app.use("/", (req, res) => {
-  res.send("Hello world");
-});
-
-app.use("/hello", (req, res) => {
-  res.send("Hello from hello");
-});
-
-app.use("/test", (req, res) => {
-  res.send("Hello from server");
-});
+    next();
+  },
+  (req, res, next) => {
+    console.log("Secona route handler");
+    next();
+  },
+  (req, res) => {
+    res.send("Last Route Handler");
+  }
+);
 
 app.listen(3000, () => {
   console.log("Server is successfully listening on port 3000");
