@@ -62,3 +62,6 @@ The Steps:
 20. Error handling using try catch
 21. Add the express.json middleware to the app
 22. Make the sign up api dynamic to receive data from the end user.
+23. API - Get user by email
+24. API - Feed API - GET /feed - get all the users from the database
+25.
