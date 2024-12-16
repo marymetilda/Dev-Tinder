@@ -65,3 +65,4 @@ The Steps:
 23. API - Get user by email
 24. API - Feed API - GET /feed - get all the users from the database
 25. Create delete /user API
+26. API - update a user
