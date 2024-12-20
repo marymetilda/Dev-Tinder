@@ -3,6 +3,8 @@ const { connectDB } = require("./config/database");
 const app = express();
 const User = require("./models/user");
 
+const ALLOWED_UPDATES = ["firstName", "lastName", "age", "gender", "skills"];
+
 app.use(express.json());
 
 app.post("/signup", async (req, res) => {
@@ -49,12 +51,24 @@ app.delete("/user", async (req, res) => {
   }
 });
 
-app.patch("/user", async (req, res) => {
+app.patch("/user/:userId", async (req, res) => {
   const data = req.body;
-  const userID = data.userID;
+  const userId = req.params?.userId;
 
   try {
-    await User.findByIdAndUpdate(userID, data, {
+    const isUpdatesAllowed = Object.keys(data).every((k) =>
+      ALLOWED_UPDATES.includes(k)
+    );
+
+    if (!isUpdatesAllowed) {
+      throw new Error("Update not allowed");
+    }
+
+    if (data?.skills.length > 10) {
+      throw new Error("Update not allowed");
+    }
+
+    await User.findByIdAndUpdate(userId, data, {
       returnDocument: "after",
       runValidators: true,
     });

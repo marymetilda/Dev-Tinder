@@ -72,3 +72,5 @@ The Steps:
 30. Create custom validate function for gender
 31. Improve the DB Schema - Put all appropriate validations on each field in Schema.
 32. Add timestamps to the schema
+33. Add API level validation on Patch request and Sign up post API
+34. Add API validation for each field.
