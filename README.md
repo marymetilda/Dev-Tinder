@@ -66,3 +66,9 @@ The Steps:
 24. API - Feed API - GET /feed - get all the users from the database
 25. Create delete /user API
 26. API - update a user
+27. schema type validations
+28. add required, unique, lowercase, min, minLength, trim
+29. Add default
+30. Create custom validate function for gender
+31. Improve the DB Schema - Put all appropriate validations on each field in Schema.
+32. Add timestamps to the schema
