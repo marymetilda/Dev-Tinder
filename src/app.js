@@ -2,6 +2,7 @@ const express = require("express");
 const { connectDB } = require("./config/database");
 const app = express();
 const User = require("./models/user");
+const { validateSignUpData } = require("./utils/validation");
 
 const ALLOWED_UPDATES = ["firstName", "lastName", "age", "gender", "skills"];
 
@@ -10,6 +11,7 @@ app.use(express.json());
 app.post("/signup", async (req, res) => {
   const user = new User(req.body);
   try {
+    validateSignUpData(req);
     await user.save();
     res.send("User added successfully");
   } catch (err) {
