@@ -80,3 +80,5 @@ The Steps:
 38. Validate data in sign up api
 39. Install bcrypt package
 40. Create passwordHash using bcrypt.hash and save the user with encrypted password.
+41. Create login api
+42. Compare passwords and throw errors if email or password is invalid.
