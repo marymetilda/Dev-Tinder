@@ -78,3 +78,5 @@ The Steps:
 36. Add validations to password, email and photoURL (validator is installed for this)
 37. NEVER TRUST req.body
 38. Validate data in sign up api
+39. Install bcrypt package
+40. Create passwordHash using bcrypt.hash and save the user with encrypted password.
