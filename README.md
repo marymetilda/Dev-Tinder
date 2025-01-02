@@ -77,3 +77,4 @@ The Steps:
 35. Install validator (npm i validator) - external library for validations
 36. Add validations to password, email and photoURL (validator is installed for this)
 37. NEVER TRUST req.body
+38. Validate data in sign up api
