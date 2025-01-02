@@ -55,11 +55,11 @@ app.patch("/user/:userId", async (req, res) => {
   const data = req.body;
   const userId = req.params?.userId;
 
-  try {
-    const isUpdatesAllowed = Object.keys(data).every((k) =>
-      ALLOWED_UPDATES.includes(k)
-    );
+  const isUpdatesAllowed = Object.keys(data).every((k) =>
+    ALLOWED_UPDATES.includes(k)
+  );
 
+  try {
     if (!isUpdatesAllowed) {
       throw new Error("Update not allowed");
     }
@@ -74,7 +74,7 @@ app.patch("/user/:userId", async (req, res) => {
     });
     res.send("Update user successfully");
   } catch (err) {
-    res.status(400).send("Something went wrong" + err.message);
+    res.status(400).send("Update failed" + err.message);
   }
 });
 

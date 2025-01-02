@@ -73,4 +73,6 @@ The Steps:
 31. Improve the DB Schema - Put all appropriate validations on each field in Schema.
 32. Add timestamps to the schema
 33. Add API level validation on Patch request and Sign up post API
-34. Add API validation for each field.
+34. Data Sanitizing: Add API validation for each field.
+35. Install validator (npm i validator) - external library for validations
+36. Add validations to password, email and photoURL (validator is installed for this)
