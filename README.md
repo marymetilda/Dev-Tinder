@@ -27,16 +27,30 @@ LLD
 
 APIs
 
+authRouter
+
 - POST /signup
 - POST /login
-- GET /profile
-- POST /profile
-- PATCH /profile
-- DELETE /profile
-- POST /sendRequest
-- POST /reviewRequest
-- GET /request
-- GET /connection
+- POST /logout
+
+profileRouter
+
+- GET /profile/view
+- PATCH /profile/edit
+- PATCH /profile/password
+
+connectionRequestRouter
+
+- POST /request/send/interested/:userId
+- POST /request/send/ignored/:userId
+- POST /request/review/accepted/:requestId
+- POST /request/review/rejected/:requestId
+
+userRouter
+
+- GET /user/connections
+- GET /user/requests/received
+- GET /user/feed ----- Get the profiles of other users on platform
 
 The Steps:
 
@@ -93,3 +107,8 @@ The Steps:
 51. Set the expiry of JWT token and cookies to 7 days
 52. Create userSchema method to getJWT()
 53. Create userSchema method to comparePassword(passwordInputByUser and passwordHash)
+54. Create a list of all APIs
+55. Group multiple routes under respective routers
+56. Create routes folder for managing auth, profile, request routes
+57. Create authRouter, profileRouter and requestRouter
+58. Import these routers in app.
