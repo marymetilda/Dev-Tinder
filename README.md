@@ -116,3 +116,9 @@ The Steps:
 60. Create PATCH /profile/edit API
 61. Create PATCH /profile/password API
 62. Make sure to validate all data in every POST, PATCH APIs.
+63. Create connection request schema
+64. Send connection request api
+65. Proper validations for data
+66. $or and $and queries in mongodb
+67. Schema.pre function
+68. add index for connection request api
