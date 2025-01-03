@@ -112,3 +112,7 @@ The Steps:
 56. Create routes folder for managing auth, profile, request routes
 57. Create authRouter, profileRouter and requestRouter
 58. Import these routers in app.
+59. Create POST /logout API
+60. Create PATCH /profile/edit API
+61. Create PATCH /profile/password API
+62. Make sure to validate all data in every POST, PATCH APIs.
