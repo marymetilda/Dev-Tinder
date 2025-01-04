@@ -35,7 +35,7 @@ connectionRequestSchema.pre("save", function (next) {
   next();
 });
 
-connectionRequestSchema.Schema.index({ fromUserId: 1, toUserId: 1 });
+connectionRequestSchema.index({ fromUserId: 1, toUserId: -1 });
 
 const ConnectRequestModel = new mongoose.model(
   "ConnectionRequest",

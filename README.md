@@ -41,10 +41,8 @@ profileRouter
 
 connectionRequestRouter
 
-- POST /request/send/interested/:userId
-- POST /request/send/ignored/:userId
-- POST /request/review/accepted/:requestId
-- POST /request/review/rejected/:requestId
+- POST /request/send/:status/:userId
+- POST /request/review/:status/:requestId
 
 userRouter
 
@@ -122,3 +120,4 @@ The Steps:
 66. $or and $and queries in mongodb
 67. Schema.pre function
 68. add index for connection request api
+69. Create POST /request/review/:status/:requestId API
