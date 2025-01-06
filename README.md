@@ -46,8 +46,8 @@ connectionRequestRouter
 
 userRouter
 
-- GET /user/connections
 - GET /user/requests/received
+- GET /user/connections
 - GET /user/feed ----- Get the profiles of other users on platform
 
 The Steps:
@@ -121,3 +121,5 @@ The Steps:
 67. Schema.pre function
 68. add index for connection request api
 69. Create POST /request/review/:status/:requestId API
+70. Create GET /user/requests/received with all the checks
+71. ref and populate
