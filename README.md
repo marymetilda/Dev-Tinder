@@ -123,3 +123,4 @@ The Steps:
 69. Create POST /request/review/:status/:requestId API
 70. Create GET /user/requests/received with all the checks
 71. ref and populate
+72. Create GET /user/connections API
