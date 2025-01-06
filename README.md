@@ -124,3 +124,4 @@ The Steps:
 70. Create GET /user/requests/received with all the checks
 71. ref and populate
 72. Create GET /user/connections API
+73. Create GET /feed API
