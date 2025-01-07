@@ -16,7 +16,7 @@ profileRouter.get("/profile/view", userAuth, async (req, res) => {
       throw new Error("User does not exist");
     }
 
-    res.send("Logged in user is " + user);
+    res.send(user);
   } catch (err) {
     res.status(400).send("Error:" + err.message);
   }
