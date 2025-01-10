@@ -4,7 +4,6 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 
 const app = express();
-// const ALLOWED_UPDATES = ["firstName", "lastName", "age", "gender", "skills"];
 
 app.use(
   cors({
