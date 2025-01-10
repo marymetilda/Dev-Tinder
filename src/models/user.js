@@ -61,7 +61,7 @@ const userSchema = new Schema(
     },
     photoURL: {
       type: String,
-      default: "https://cdn-icons-png.flaticon.com/512/219/219970.png",
+      default: "https://www.360legal.in/wp-content/uploads/2021/01/nobody.jpg",
       validate: (value) => {
         if (!validator.isURL(value)) {
           throw new Error("Enter a valid photo URL");
